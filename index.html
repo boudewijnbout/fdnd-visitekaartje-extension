@@ -21,29 +21,39 @@
     />
   </head>
   <body>
-
     <!-- Main wrapper -->
-    <main class="main-wrapper">
+    <main>
       <header>
+        <!-- Name banner -->
         <h1 class="banner">Boudewijn Bout</h1>
 
         <!-- Navigation -->
         <nav>
           <ul>
+            <!-- About me -->
             <li>
-              <a href="#"> Over mij </a>
+              <a href="#" id="aboutme-link" class="active">Over mij</a>
             </li>
-            <li>Mijn projecten</li>
-            <li>Mijn hobbies</li>
+
+            <!-- Hobbys -->
+            <li>
+              <a href="#" id="hobby-link">Mijn hobby's</a>
+            </li>
           </ul>
         </nav>
       </header>
 
-      <!-- Name banner -->
-
       <!-- Main content -->
-      <div class="main-content">
-        <p>Hi, mijn naam is <span>Boudewijn</span></p>
+      <div class="main-content visible" id="about-me">
+        <p>Hi, mijn naam is <span>Boudewijn</span>.</p>
+        <p>Ik ben <span>20 jaar</span> en woon in <span>Uithoorn.</span></p>
+        <p>Hier woon ik al 8 jaar met mijn broertje en mijn ouders.</p>
+      </div>
+
+      <div class="main-content" id="hobbys">
+        <p>Ik heb een aantal <span>hobby's</span> die ik leuk vind:</p>
+        <p>Mijn favoriete hobby is <span>programmeren.</span></p>
+        <p>Daarnaast <span>sport</span> ik hier en daar.</p>
       </div>
 
       <!-- Social icons -->
@@ -75,5 +85,8 @@
       <!-- Footer -->
       <footer></footer>
     </main>
+
+    <!-- Scripts -->
+    <script src="scripts/script.js"></script>
   </body>
 </html>

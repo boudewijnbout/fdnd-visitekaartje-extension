@@ -58,11 +58,11 @@ main {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.15) inset, 0 6px 10px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
   font-size: 2.25rem;
-  animation: bounceUp 3.5s;
+  animation: fadeUp 3.5s;
 }
 
 /* Bounce up animation */
-@keyframes bounceUp {
+@keyframes fadeUp {
   0% {
     top: -30px;
   }
@@ -101,22 +101,38 @@ main {
 # Navigation
 --------------------------------------------------------------*/
 nav {
-    /* margin: 40px 0; */
-    animation: fadeDown 1.5s forwards;
+  animation: fadeDown 1s forwards;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-    color: #fff;
-    padding: 0;
-    margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
 }
 
 nav ul li {
-    margin-right: 15px;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: 200ms;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* Navigation active class */
+.active {
+  color: #ffffff;
 }
 
 @keyframes fadeDown {
@@ -125,7 +141,7 @@ nav ul li {
   }
 
   100% {
-  margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
@@ -133,18 +149,35 @@ nav ul li {
   # Main content
   --------------------------------------------------------------*/
 .main-content {
-    font-family: 'Montserrat', sans-serif;
-    margin: 5.5rem 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  margin: 4rem 0;
 }
 
 .main-content > p {
-    color: #fff;
-    font-size: 1.2em;
+  color: rgba(255,255,255,0.7);
+  font-size: 1.5em;
 }
 
 .main-content span {
-    border-bottom: 2px solid #ec0063;
+  border-bottom: 2px solid #ec0063;
+  color: #fff;
 }
+
+/* Visible class */
+.visible {
+  display: block!important;
+}
+
+#hobbys {
+  display: none;
+  transition: all 300ms;
+}
+
+#about-me {
+  display: none;
+  transition: 300ms;
+} 
 
 /*--------------------------------------------------------------
   # Social icons
