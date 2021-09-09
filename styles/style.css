@@ -1,0 +1,172 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: rgb(28, 79, 195);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 79, 195, 1) 0%,
+    rgba(22, 64, 158, 1) 65%
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+  # Main wrapper
+  --------------------------------------------------------------*/
+main {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 60%;
+  height: 65vh;
+  padding: 0 1.5em 0 2.5em;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+  # Banner
+  --------------------------------------------------------------*/
+.banner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -60px;
+  text-align: center;
+  display: block;
+  width: 400px;
+  height: 60px;
+  border: dashed 5px hsl(0, 0%, 100%);
+  font: normal 30px/60px "Alice";
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    #ec0063,
+    #df006e,
+    #d00077,
+    #be0080,
+    #ab0087
+  );
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15) inset, 0 6px 10px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  font-size: 2.25rem;
+  animation: bounceUp 3.5s;
+}
+
+/* Bounce up animation */
+@keyframes bounceUp {
+  0% {
+    top: -30px;
+  }
+
+  50% {
+    top: -60px;
+  }
+}
+
+.banner::before,
+.banner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -70px;
+  top: 24px;
+  display: block;
+  width: 40px;
+  height: 0px;
+  border: 30px solid #ec0063;
+  border-right: 20px solid #d00077;
+  border-bottom-color: #ec0063;
+  border-left-color: transparent;
+  transform: rotate(-5deg);
+}
+
+.banner::after {
+  left: auto;
+  right: -70px;
+  border-left: 20px solid #d00077;
+  border-right: 30px solid transparent;
+  transform: rotate(5deg);
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+nav {
+    /* margin: 40px 0; */
+    animation: fadeDown 1.5s forwards;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    color: #fff;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+@keyframes fadeDown {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+  margin-top: 40px;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Main content
+  --------------------------------------------------------------*/
+.main-content {
+    font-family: 'Montserrat', sans-serif;
+    margin: 5.5rem 0;
+}
+
+.main-content > p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.main-content span {
+    border-bottom: 2px solid #ec0063;
+}
+
+/*--------------------------------------------------------------
+  # Social icons
+  --------------------------------------------------------------*/
+.social-icons {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  right: 0;
+  bottom: 0;
+  padding: 7px 7px;
+}
+
+.social-icons img {
+  width: 25px;
+  height: auto;
+  transition: all 0.25s;
+  margin-right: 10px;
+  opacity: 0.7;
+}
+
+.social-icons img:hover {
+  transform: skew(0.312rad) scale(1.2);
+  opacity: 1;
+}
